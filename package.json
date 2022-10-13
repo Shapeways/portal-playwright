@@ -1,0 +1,32 @@
+{
+  "name": "portal-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Shapeways/portal-playwright.git",
+  "author": "asaa <asaames@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1",
+    "eslint": "^8.11.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.1"
+  },
+  "scripts": {
+    "fix": "eslint . --fix --ext .js",
+    "lint": "eslint . --ext .js",
+    "prepare": "husky install",
+    "prettier": "prettier --write .",
+    "test": "npx playwright test",
+    "test-and-report": "yarn test && npx playwright show-report",
+    "test-and-report-debug": "PWDEBUG=1 yarn test && npx playwright show-report"
+  },
+  "lint-staged": {
+    "!(*spec).js": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

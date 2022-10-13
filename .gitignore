@@ -1,0 +1,14 @@
+node_modules/
+test-results/
+playwright-report/
+
+# Development
+/.idea/
+/.env
+/.env.local
+.DS_STORE
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
